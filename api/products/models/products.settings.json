@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "views": {
+      "type": "biginteger"
+    },
+    "product_images": {
+      "collection": "product-images",
+      "via": "product"
+    },
+    "category": {
+      "model": "categories",
+      "via": "products"
+    },
+    "tags": {
+      "collection": "tags",
+      "via": "products",
+      "dominant": true
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "products"
+    },
+    "store": {
+      "model": "stores",
+      "via": "products"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

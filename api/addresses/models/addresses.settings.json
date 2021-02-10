@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "name": "Addresses",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fullAddress": {
+      "type": "text"
+    },
+    "postalCode": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "addresses"
+    },
+    "city": {
+      "model": "cities"
+    },
+    "isPrimary": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "Orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "order_products": {
+      "collection": "order-products",
+      "via": "order"
+    },
+    "totalPrice": {
+      "type": "biginteger"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "waiting_confirmation",
+        "confirmed",
+        "rejected",
+        "paid",
+        "packaged",
+        "sent",
+        "delivered"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "shipping": {
+      "model": "shippings"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "name": "Stores",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "profileImage": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "products": {
+      "via": "store",
+      "collection": "products"
+    }
+  }
+}

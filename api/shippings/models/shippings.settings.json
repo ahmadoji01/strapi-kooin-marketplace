@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shippings",
+  "info": {
+    "name": "Shippings"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "price": {
+      "type": "biginteger"
+    }
+  }
+}

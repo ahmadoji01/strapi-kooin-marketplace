@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "order_products",
+  "info": {
+    "name": "Order Products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product": {
+      "model": "products"
+    },
+    "package": {
+      "model": "packages"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "totalPrice": {
+      "type": "biginteger"
+    },
+    "order": {
+      "via": "order_products",
+      "model": "orders"
+    },
+    "note": {
+      "type": "string"
+    },
+    "shipping": {
+      "model": "shippings"
+    }
+  }
+}

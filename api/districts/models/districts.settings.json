@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "districts",
+  "info": {
+    "name": "Districts"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "district": {
+      "type": "string"
+    },
+    "districtCode": {
+      "type": "string"
+    },
+    "state": {
+      "model": "states"
+    }
+  }
+}

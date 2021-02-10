@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_images",
+  "info": {
+    "name": "Product Images"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "product": {
+      "via": "product_images",
+      "model": "products"
+    },
+    "imageURL": {
+      "type": "string"
+    }
+  }
+}

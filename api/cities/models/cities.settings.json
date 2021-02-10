@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cities",
+  "info": {
+    "name": "Cities",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "city": {
+      "type": "string"
+    },
+    "cityCode": {
+      "type": "string"
+    },
+    "district": {
+      "model": "districts"
+    }
+  }
+}

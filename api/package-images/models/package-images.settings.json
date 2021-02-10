@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "package_images",
+  "info": {
+    "name": "Package Images"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "package": {
+      "via": "package_images",
+      "model": "packages"
+    },
+    "imageURL": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_payment_methods",
+  "info": {
+    "name": "User Payment Methods"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "accountNumber": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "via": "user_payment_methods",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
