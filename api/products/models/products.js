@@ -12,9 +12,6 @@ module.exports = {
     lifecycles: {
         beforeCreate(data) {
             data.slug = slugify(data.name, {lower: true})
-        },
-        beforeUpdate(data) {
-            data.slug = slugify(data.name, {lower: true})
         }
     }
 };
