@@ -47,6 +47,22 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "GET",
+      "path": "/searchbycategories",
+      "handler": "products.searchbycategories",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/products/recommendations/:slug",
+      "handler": "products.recommendations",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }
