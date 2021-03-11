@@ -22,11 +22,17 @@
       "model": "user",
       "via": "addresses"
     },
-    "city": {
-      "model": "cities"
-    },
     "isPrimary": {
       "type": "boolean"
+    },
+    "country": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
     }
   }
 }
