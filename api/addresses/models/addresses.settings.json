@@ -33,6 +33,12 @@
     },
     "city": {
       "type": "string"
+    },
+    "recipientName": {
+      "type": "string"
+    },
+    "companyName": {
+      "type": "string"
     }
   }
 }

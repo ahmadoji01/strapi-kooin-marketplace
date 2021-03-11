@@ -1,6 +1,22 @@
 {
   "routes": [
     {
+      "method": "PUT",
+      "path": "/updateMyAddress",
+      "handler": "addresses.updateMyAddress",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/myAddress",
+      "handler": "addresses.myAddress",
+      "config": {
+        "policies": []
+      }
+    },
+    {
       "method": "GET",
       "path": "/addresses",
       "handler": "addresses.find",
@@ -44,14 +60,6 @@
       "method": "DELETE",
       "path": "/addresses/:id",
       "handler": "addresses.delete",
-      "config": {
-        "policies": []
-      }
-    },
-    {
-      "method": "GET",
-      "path": "/myAddress",
-      "handler": "addresses.myAddress",
       "config": {
         "policies": []
       }
