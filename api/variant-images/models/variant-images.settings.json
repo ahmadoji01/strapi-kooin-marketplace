@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "product_images",
+  "collectionName": "variant_images",
   "info": {
-    "name": "Product Images",
-    "description": ""
+    "name": "Variant Images"
   },
   "options": {
     "increments": true,
@@ -11,10 +10,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "product": {
-      "via": "product_images",
-      "model": "products"
-    },
     "imageURL": {
       "type": "string"
     }

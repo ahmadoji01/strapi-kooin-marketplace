@@ -16,8 +16,8 @@
       "model": "user"
     },
     "order_products": {
-      "collection": "order-products",
-      "via": "order"
+      "via": "order",
+      "collection": "order-products"
     },
     "totalPrice": {
       "type": "biginteger"

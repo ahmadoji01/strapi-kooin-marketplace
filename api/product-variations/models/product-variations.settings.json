@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "product_images",
+  "collectionName": "product_variations",
   "info": {
-    "name": "Product Images",
+    "name": "Variants",
     "description": ""
   },
   "options": {
@@ -11,9 +11,15 @@
     "draftAndPublish": true
   },
   "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
     "product": {
-      "via": "product_images",
-      "model": "products"
+      "model": "products",
+      "via": "variants"
     },
     "imageURL": {
       "type": "string"

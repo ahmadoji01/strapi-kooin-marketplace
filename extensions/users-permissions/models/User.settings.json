@@ -74,8 +74,8 @@
       "type": "string"
     },
     "products": {
-      "collection": "products",
-      "via": "users_permissions_user"
+      "via": "users_permissions_user",
+      "collection": "products"
     },
     "phone": {
       "type": "string"

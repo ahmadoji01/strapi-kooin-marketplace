@@ -39,6 +39,9 @@
     },
     "companyName": {
       "type": "string"
+    },
+    "phone": {
+      "type": "string"
     }
   }
 }

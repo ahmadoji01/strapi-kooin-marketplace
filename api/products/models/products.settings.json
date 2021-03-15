@@ -37,9 +37,9 @@
       "dominant": true
     },
     "users_permissions_user": {
-      "via": "products",
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "products"
     },
     "store": {
       "model": "stores",
@@ -50,6 +50,19 @@
     },
     "longDescription": {
       "type": "richtext"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "allowNote": {
+      "type": "boolean"
+    },
+    "allowNoteImage": {
+      "type": "boolean"
+    },
+    "variants": {
+      "via": "product",
+      "collection": "product-variations"
     }
   }
 }
