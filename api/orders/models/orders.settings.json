@@ -16,8 +16,8 @@
       "model": "user"
     },
     "order_products": {
-      "via": "order",
-      "collection": "order-products"
+      "collection": "order-products",
+      "via": "order"
     },
     "totalPrice": {
       "type": "biginteger"
@@ -40,6 +40,9 @@
     },
     "shipping": {
       "model": "shippings"
+    },
+    "trackingNumber": {
+      "type": "string"
     }
   }
 }

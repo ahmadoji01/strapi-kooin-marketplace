@@ -24,17 +24,18 @@
       "type": "biginteger"
     },
     "order": {
-      "model": "orders",
-      "via": "order_products"
+      "via": "order_products",
+      "model": "orders"
     },
     "note": {
       "type": "string"
     },
-    "shipping": {
-      "model": "shippings"
-    },
     "noteImage": {
       "type": "string"
+    },
+    "variants": {
+      "collection": "product-variations",
+      "via": "order_product"
     }
   }
 }
