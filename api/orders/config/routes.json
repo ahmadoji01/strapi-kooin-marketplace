@@ -55,6 +55,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/syncMyOrder",
+      "handler": "orders.syncMyOrder",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

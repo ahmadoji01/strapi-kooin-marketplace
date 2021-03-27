@@ -19,4 +19,29 @@ module.exports = {
 
         return sanitizeEntity(order, { model: strapi.models.orders });
     },
+
+    async syncMyOrder(ctx) {
+        const user = ctx.state.user;
+
+        let order = await strapi.services.orders.findOne({ "users_permissions_user.id": user.id, status: "active" });
+        if (!order) {
+            order = await strapi.services.orders.create({ users_permissions_user: user, status: "active" });
+        }
+
+        let { orderProducts } = ctx.request.body;
+        if (orderProducts) {
+            let i;
+            for (i = 0; i < orderProducts.length; i++) {
+                orderProducts[i].order = order.id;
+                let orderProduct = await strapi.services['order-products'].findOne({ "product.id": orderProducts[i].id, variants: orderProducts[i].variants });
+                if (!orderProduct)
+                    strapi.services['order-products'].create(orderProducts[i]);
+                else
+                    strapi.services['order-products'].update({ id: orderProduct.id }, orderProducts[i]);
+            }
+        }
+        order.order_products = orderProducts;
+
+        return sanitizeEntity(order, { model: strapi.models.orders });
+    },
 };

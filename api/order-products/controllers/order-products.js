@@ -19,13 +19,13 @@ module.exports = {
             order,
         };
 
-        let orderProduct = await strapi.services.order-products.findOne({ "order.id": order.id, "product.id": "productData.product.id" });
+        let orderProduct = await strapi.services['order-products'].findOne({ "order.id": order.id, "product.id": "productData.product.id" });
         let result;
         if (orderProduct) {
-            result = await strapi.services.order-products.edit({ id: orderProduct.id }, orderProductData);
-            return sanitizeEntity(result, { model: strapi.models.order-products });
+            result = await strapi.services['order-products'].update({ id: orderProduct.id }, orderProductData);
+            return sanitizeEntity(result, { model: strapi.models['order-products'] });
         }
-        result = await strapi.services.order-products.create(orderProductData);
-        return sanitizeEntity(result, { model: strapi.models.order-products });
+        result = await strapi.services['order-products'].create(orderProductData);
+        return sanitizeEntity(result, { model: strapi.models['order-products'] });
     },
 };
